@@ -8,7 +8,14 @@ module.exports = exports = function(app, options) {
 	var parse = rex(options);
 
 	var js = function(content, callback) {
-		parse(new Function(content), callback);
+		try {
+			content = new Function(content);
+		} catch(err) {
+			callback(err);
+			return;
+		}
+
+		parse(content, callback);
 	};
 	var html = function(content, callback) {	
 		var handler = new htmlparser.DefaultHandler(function(err, dom) {
