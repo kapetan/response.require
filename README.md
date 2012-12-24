@@ -74,7 +74,7 @@ app.get('/route', function(request, response) {
 });
 ```
 
-`responserequire.script` adds a more generic method of doing the above, which works with all HTML files.
+`responserequire.script` adds a more generic method of doing the above, which works with all HTML files, but requires multiple requests to the server.
 
 [root]:https://github.com/mafintosh/root "root"
 [rex]:https://github.com/gett/rex "rex"
