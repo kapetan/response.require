@@ -70,12 +70,12 @@ module.exports = exports = function(app, options) {
 
 		var send = function(err, body) {
 			if(err) return response.error(err);
+
+			response.setHeader('Content-Type', 'application/javascript');
 			response.send(body);
 		};
 		var end = function(content) {
 			if(!content) return response.end();
-
-			response.setHeader('Content-Type', 'application/javascript');
 			
 			if(isHtml) return html(content, send);
 			js(content, send);
