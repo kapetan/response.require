@@ -1,0 +1,9 @@
+{
+	"name": "response.require",
+	"version": "0.1.0",
+	"repository": "https://github.com/kapetan/response.require",
+	"description": "Rex Javascript compiling for root",
+	"keywords": ["root", "rex", "require"],
+	"author": "Mirza Kapetanovic",
+	"dependencies": { "rex": "~0.7.0", "cat": "*", "htmlparser": "~1.7.6" }
+}
